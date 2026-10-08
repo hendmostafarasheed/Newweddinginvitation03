@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#f4eee5" />
+  <title>Adham & Salma | Wedding Invitation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="intro" class="intro">
+    <div class="cover-bg" aria-hidden="true"></div>
+    <img class="cover" src="invitation-cover.jpg" alt="Adham & Salma Wedding Invitation" />
+
+    <div class="couple-layer" aria-hidden="true">
+      <div class="person groom"><img src="invitation-cover.jpg" alt="" /></div>
+      <div class="person bride"><img src="invitation-cover.jpg" alt="" /></div>
+    </div>
+
+    <button id="openInvitation" class="open-btn" type="button">
+      <span>OPEN INVITATION</span><b>→</b>
+    </button>
+  </main>
+
+  <section id="weddingContent" class="wedding-content">
+    <div class="page-card">
+      <p class="eyebrow">TOGETHER WITH THEIR FAMILIES</p>
+      <h1>Adham <span>&amp;</span> Salma</h1>
+      <p class="invite">INVITE YOU TO CELEBRATE THEIR MARRIAGE</p>
+
+      <div class="details">
+        <div><strong>DECEMBER 12, 2026</strong></div>
+        <div>8:00 PM – 12:00 AM</div>
+        <div class="venue">Four Seasons Hotel Cairo at Nile Plaza<br />Plaza Ballroom</div>
+        <div>1089 Nile Corniche, Garden City, Cairo</div>
+      </div>
+
+      <a class="location" href="https://maps.google.com/?q=Four+Seasons+Hotel+Cairo+at+Nile+Plaza" target="_blank" rel="noopener">
+        VIEW LOCATION
+      </a>
+
+      <div class="countdown-wrap">
+        <div class="section-title">COUNTDOWN TO OUR WEDDING</div>
+        <div id="countdown" class="countdown" aria-live="polite">
+          <div><strong id="days">00</strong><span>DAYS</span></div>
+          <div><strong id="hours">00</strong><span>HOURS</span></div>
+          <div><strong id="minutes">00</strong><span>MINUTES</span></div>
+          <div><strong id="seconds">00</strong><span>SECONDS</span></div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="confirmBtn" class="action-btn primary" type="button">CONFIRM ATTENDANCE</button>
+        <button id="shareBtn" class="action-btn" type="button">SHARE INVITATION</button>
+      </div>
+    </div>
+  </section>
+
+  <button id="musicBtn" class="music-btn" type="button" aria-label="Play music">♪</button>
+  <audio id="weddingMusic" src="love-me-like-you-do.mp3" preload="auto" loop></audio>
+
+  <div id="rsvpModal" class="modal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="rsvpTitle">
+      <button id="closeModal" class="close-modal" type="button" aria-label="Close">×</button>
+      <p class="section-title">RSVP</p>
+      <h2 id="rsvpTitle">Will you join us?</h2>
+      <input id="guestName" type="text" placeholder="Your name" autocomplete="name" />
+      <select id="attendance">
+        <option value="Yes, I will attend">Yes, I will attend</option>
+        <option value="Sorry, I can't attend">Sorry, I can't attend</option>
+      </select>
+      <input id="guestCount" type="number" min="1" max="10" value="1" placeholder="Number of guests" />
+      <button id="rsvpSubmit" class="action-btn primary" type="button">PREPARE CONFIRMATION</button>
+      <p id="rsvpNote" class="rsvp-note"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
